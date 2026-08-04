@@ -1,10 +1,13 @@
+.top-act__btn, .top-act__group, .top-act, .nav-bar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background: #eeeeee;
 }
 
 .top-bar {
-  display: flex;
-  align-items: center;
   padding: 30px 0;
 }
 
@@ -13,8 +16,6 @@
   margin-right: auto;
 }
 .nav-bar__list {
-  display: flex;
-  align-items: center;
   gap: 30px;
 }
 .nav-bar__link {
@@ -30,13 +31,9 @@
 }
 
 .top-act {
-  display: flex;
-  align-items: center;
   gap: 20px;
 }
 .top-act__group {
-  display: flex;
-  align-items: center;
   min-width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -48,9 +45,8 @@
 }
 .top-act__btn {
   padding: 13px 20px;
-  display: flex;
-  align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .top-act__title {
   font-size: 1.5rem;
@@ -61,13 +57,14 @@
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #EDEDF6;
+  background: #ededf6;
 }
 .top-act__avt {
   width: 50px;
   height: 50px;
   border-radius: 8px;
   display: block;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=header.css.map */
