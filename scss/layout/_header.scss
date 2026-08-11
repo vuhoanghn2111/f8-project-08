@@ -11,10 +11,11 @@
     @extend %flexItemsCenter;
     padding: 30px 0;
     @include abstracts.breakpoint(sm) {
-        padding: 16px;
+        padding: 16px 0;
+        justify-content: space-between;
     }
     @include abstracts.breakpoint(lg) {
-        padding: 20px;
+        padding: 20px 0;
     }
     &__more {
         display: none;
@@ -52,7 +53,9 @@
     @extend %flexItemsCenter;
 
     margin-left: auto;
-
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0;
+    }
     gap: 20px;
 
     &__group {
