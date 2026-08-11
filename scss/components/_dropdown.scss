@@ -1,0 +1,13 @@
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 5px;
+
+    
+    &__inner {
+        border-radius: 20px;
+        background: var(--drop-down-bg-color);
+        box-shadow: 0 40px 90px 20px var(--drop-down-shadow-color);
+        padding: 30px;
+    }
+}
