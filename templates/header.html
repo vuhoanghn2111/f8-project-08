@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More -->
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle" toggle-target="#nav-bar">
             <img src="./assets/icons/more.svg" alt="more" class="top-bar__more-icon icon" />
         </button>
         <!-- Logo -->
@@ -9,10 +9,13 @@
             <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
             <h1 class="logo__title">grocerymart</h1>
         </a>
-        <nav class="nav-bar">
+        <nav id="nav-bar" class="nav-bar hide">
+            <button class="nav-bar__close-btn js-toggle" toggle-target="#nav-bar">
+                <img src="./assets/icons/arrow-left.svg" alt="">
+            </button>
             <ul class="nav-bar__list js-dropdown-list">
                 <li class="nav-bar__item">
-                    <a href="" class="nav-bar__link">
+                    <a href="#!" class="nav-bar__link">
                         Departments
                         <img src="./assets/icons/arrow-down.svg" class="nav-bar__arrow icon" alt="" />
                     </a>
@@ -3957,7 +3960,7 @@
                     </div>
                 </li>
                 <li class="nav-bar__item">
-                    <a href="" class="nav-bar__link">
+                    <a href="#!" class="nav-bar__link">
                         Grocery
                         <img src="./assets/icons/arrow-down.svg" class="icon nav-bar__arrow" alt="" />
                     </a>
@@ -4294,7 +4297,7 @@
                     </div>
                 </li>
                 <li class="nav-bar__item">
-                    <a href="" class="nav-bar__link">
+                    <a href="#!" class="nav-bar__link">
                         Beauty
                         <img src="./assets/icons/arrow-down.svg" class="icon nav-bar__arrow" alt="" />
                     </a>
@@ -4572,6 +4575,9 @@
                 </li>
             </ul>
         </nav>
+        <div class="nav-bar__overlay js-toggle" toggle-target="#nav-bar">
+
+        </div>
 
         <!-- Action -->
         <div class="top-act">
