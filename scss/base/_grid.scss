@@ -1,4 +1,6 @@
+@use "sass:map";
 @use "sass:math";
+@use "sass:string";
 
 // Breakpoints, dimension, container, row, column, v.v
 $grid-breakpoints: (
@@ -94,7 +96,7 @@ $gutters: (
 @mixin make-offsets($infix) {
     @for $i from 0 to $grid-columns {
         .offset#{$infix}-#{$i} {
-            margin-left: if($i > 0, math.div(100%, $grid-columns) * $i, 0);
+            margin-left: if(sass($i > 0): math.div(100%, $grid-columns) * $i; else: 0);
         }
     }
 }
@@ -114,9 +116,11 @@ $gutters: (
 }
 
 @each $breakpoint, $dimension in $grid-breakpoints {
-    $max-width: map-get($container-max-widths, $breakpoint);
+    $max-width: map.get($container-max-widths, $breakpoint);
     $is-xs: $breakpoint == xs;
-    $infix: if($is-xs, "", "-#{$breakpoint}");
+    $infix: if(
+        sass($is-xs): "" ; else: "-#{$breakpoint}",
+    );
 
     @include make-media-query($dimension, $is-xs) {
         .container {

@@ -1,0 +1,36 @@
+// Khai báo danh sách display values
+$display-values: block, flex, grid, none;
+
+// Khai báo breakpoints
+$breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
+@mixin make-display($breakpoint: null) {
+    $infix: null;
+    @if $breakpoint == null {
+        $infix: "";
+    } @else {
+        $infix: "-#{$breakpoint}";
+    }
+
+    @each $display in $display-values {
+        .d#{$infix}-#{$display} {
+            display: $display !important;
+        }
+    }
+}
+
+// Base (không breakpoint)
+@include make-display();
+
+// Responsive theo breakpoints
+@each $breakpoint, $dimension in $breakpoints {
+    @media (max-width: ($dimension - 0.02)) {
+        @include make-display($breakpoint);
+    }
+}
