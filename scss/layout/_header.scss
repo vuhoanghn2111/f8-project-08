@@ -22,7 +22,6 @@
     @include abstracts.breakpoint(lg) {
         padding: 20px 0;
     }
-    
 }
 .nav-bar {
     margin-left: 129px;
@@ -78,6 +77,8 @@
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
+            overflow-y: auto;
+            height: calc(100% - 26px);
         }
     }
     &__item {
@@ -87,9 +88,6 @@
 
         @include abstracts.breakpoint(lg) {
             width: 100%;
-            &:hover .dropdown {
-                display: none;
-            }
         }
     }
     &__link {
@@ -132,7 +130,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
-        
     }
     &__group--single {
         @include abstracts.breakpoint(lg) {

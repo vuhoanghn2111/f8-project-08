@@ -5,8 +5,12 @@
     left: 0;
     padding-top: 54px;
     width: min(1240px, 100%);
-    display: none;   
-
+    display: none;
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        display: block;
+        padding-top: 0;
+    }
     &__inner {
         --inner-padding: 30px;
 
@@ -24,6 +28,15 @@
             translate: -50%;
             filter: var(--drop-down-arrow-color);
         }
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 .top-menu {
@@ -36,6 +49,12 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 .menu-column {
@@ -44,6 +63,10 @@
 
     + .menu-column {
         margin-top: 22px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
     }
     &__icon {
         position: relative;
@@ -54,6 +77,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
     &__content {
@@ -81,9 +108,16 @@
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
+        
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
     &__list {
         margin-top: 19px;
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
     &__item {
         &--active .sub-menu {
@@ -120,6 +154,10 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
-
+    }
+    @include abstracts.breakpoint(lg) {
+        padding-left: 0;
+        position: initial;
+        grid-template-columns: 1fr;
     }
 }
