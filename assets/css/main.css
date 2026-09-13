@@ -1255,7 +1255,7 @@ html.dark {
   --top-menu-border-color: #d2d1d6;
 }
 
-.top-act__btn, .top-act__group, .top-act, .nav-bar__link, .nav-bar__list, .top-bar {
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
 }
@@ -1285,16 +1285,16 @@ html.dark {
   }
 }
 
-.nav-bar {
+.navbar {
   margin-left: 129px;
 }
 @media (max-width: 1199.98px) {
-  .nav-bar {
+  .navbar {
     margin-left: 28px;
   }
 }
 @media (max-width: 991.98px) {
-  .nav-bar {
+  .navbar {
     position: fixed;
     inset: 0 50% 0 0;
     background: white;
@@ -1304,29 +1304,29 @@ html.dark {
     translate: -100%;
     transition: translate 0.5s;
   }
-  .nav-bar.show {
+  .navbar.show {
     translate: 0;
   }
-  .nav-bar.show ~ .nav-bar__overlay {
+  .navbar.show ~ .navbar__overlay {
     visibility: visible;
     opacity: 1;
   }
 }
-.nav-bar__close-btn {
+.navbar__close-btn {
   display: none;
 }
 @media (max-width: 991.98px) {
-  .nav-bar__close-btn {
+  .navbar__close-btn {
     display: block;
     padding: 10px 40px;
   }
 }
-.nav-bar__overlay {
+.navbar__overlay {
   visibility: hidden;
   opacity: 0;
 }
 @media (max-width: 991.98px) {
-  .nav-bar__overlay {
+  .navbar__overlay {
     position: fixed;
     inset: 0;
     z-index: 8;
@@ -1336,22 +1336,28 @@ html.dark {
   }
 }
 @media (max-width: 991.98px) {
-  .nav-bar__list {
+  .navbar__list {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
     height: calc(100% - 26px);
   }
 }
-.nav-bar__item:hover .dropdown {
+.navbar__item:hover .dropdown {
   display: block;
 }
 @media (max-width: 991.98px) {
-  .nav-bar__item {
+  .navbar__item {
     width: 100%;
   }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
 }
-.nav-bar__link {
+.navbar__link {
   gap: 6px;
   height: 50px;
   padding: 0 15px;
@@ -1361,15 +1367,24 @@ html.dark {
   line-height: 146.667%;
 }
 @media (max-width: 991.98px) {
-  .nav-bar__link {
+  .navbar__link {
     padding: 0 40px;
     font-size: 1.6rem;
     line-height: 150%;
     justify-content: space-between;
   }
 }
-.nav-bar__arrow {
+.navbar__arrow {
   margin-top: 3px;
+}
+@media (max-width: 991.98px) {
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 
 .top-act {
@@ -1463,7 +1478,6 @@ html.dark {
 @media (max-width: 991.98px) {
   .dropdown {
     position: initial;
-    display: block;
     padding-top: 0;
   }
 }
