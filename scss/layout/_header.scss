@@ -32,20 +32,25 @@
         // display: none;
         position: fixed;
         inset: 0 50% 0 0;
-        background: white;
+        background: var(--side-bar-bg);
         margin-left: 0;
         z-index: 9;
         padding: 20px 0;
+        border-radius: 0 20px 20px 0;
 
         translate: -100%;
         transition: translate 0.5s;
         &.show {
             translate: 0;
+            box-shadow: 0 40px 90px 20px var(--side-bar-shadow);
         }
         &.show ~ &__overlay {
             visibility: visible;
             opacity: 1;
         }
+    }
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
     }
 
     &__close-btn {
@@ -54,6 +59,9 @@
         @include abstracts.breakpoint(lg) {
             display: block;
             padding: 10px 40px;
+        }
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px 10px;
         }
     }
 
@@ -78,7 +86,14 @@
             flex-direction: column;
             align-items: flex-start;
             overflow-y: auto;
-            height: calc(100% - 26px);
+            height: calc(100% - 40px);
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 142px);
+        }
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 124px);
         }
     }
     &__item {
@@ -112,6 +127,10 @@
             font-size: 1.6rem;
             line-height: 150%;
             justify-content: space-between;
+        }
+        @include abstracts.breakpoint(sm) {
+            height: 44px;
+            padding: 0 20px;
         }
     }
     &__arrow {
@@ -179,5 +198,27 @@
         border-radius: 8px;
         display: block;
         cursor: pointer;
+    }
+}
+
+.nav-btn {
+    height: 50px;
+    padding: 0 40px;
+    align-items: center;
+
+    @include abstracts.breakpoint(sm) {
+        height: 44px;
+        padding: 0 20px;
+    }
+
+    &__title {
+        margin-left: 16px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__qnt {
+        @extend .nav-btn__title;
+        margin-left: auto;
     }
 }

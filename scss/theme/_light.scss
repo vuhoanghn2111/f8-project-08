@@ -2,8 +2,8 @@
 
 :root {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(35%)
-        saturate(958%) hue-rotate(210deg) brightness(92%) contrast(98%);
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(35%) saturate(958%) hue-rotate(210deg) brightness(92%)
+        contrast(98%);
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
@@ -12,10 +12,14 @@
     --top-act-group-separate: #ededf6;
     @include abstracts.breakpoint(lg) {
         --header-bg-color: #fff;
-        --header-shadow-color: rgba(237, 237, 246, 0.20);
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
     // Dropdown
     --drop-down-bg-color: #fff;
     --drop-down-shadow-color: rgba(200, 200, 200, 0.4);
     --top-menu-border-color: #d2d1d6;
+
+    // Side bar
+    --side-bar-bg: #fff;
+    --side-bar-shadow: rgba(200, 200, 200, 0.40);
 }
