@@ -22,4 +22,12 @@
     // Side bar
     --side-bar-bg: #fff;
     --side-bar-shadow: rgba(200, 200, 200, 0.4);
+
+    // Category item
+    --cate-item-bg: #eee;
+    --cate-item-thumb-bg: #fff;
+    --cate-item-title-color: #000;
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
+    }
 }
