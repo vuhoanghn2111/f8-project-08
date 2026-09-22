@@ -9,7 +9,6 @@
     }
 
     &__heading {
-        margin-bottom: 20px;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
@@ -17,6 +16,7 @@
 
     &__cate {
         --grid-gutter-x: 51px;
+        margin-top: 20px;
 
 
         @include abstracts.screen(xl) {
@@ -26,5 +26,11 @@
         @include abstracts.screen(md) {
             --grid-gutter-y: 20px;
         }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
