@@ -1905,6 +1905,10 @@ html.dark {
 .like-btn--liked .like-btn__icon {
   display: none;
 }
+.like-btn__icon--like {
+  margin-top: 6px;
+}
+
 .product-card {
   padding: 16px;
   border-radius: 20px;
