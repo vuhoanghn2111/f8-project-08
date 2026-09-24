@@ -26,4 +26,15 @@
     justify-content: center;
     background: var(--like-btn-bg);
     box-shadow: 0 20px 60px var(--like-btn-shadow);
+
+    &:not(&--liked) .like-btn__icon--liked {
+        display: none;
+    }
+    &--liked .like-btn__icon {
+        display: none;
+    }
+
+    &__icon--like {
+        
+    }
 }

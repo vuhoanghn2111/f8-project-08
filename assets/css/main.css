@@ -92,6 +92,13 @@ a, button, input, textarea, select {
   filter: var(--icon-color);
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1892,7 +1899,12 @@ html.dark {
   background: var(--like-btn-bg);
   box-shadow: 0 20px 60px var(--like-btn-shadow);
 }
-
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
 .product-card {
   padding: 16px;
   border-radius: 20px;
@@ -1956,7 +1968,6 @@ html.dark {
 }
 .home__cate {
   --grid-gutter-x: 51px;
-  margin-top: 20px;
 }
 @media (max-width: 1199.98px) {
   .home__cate {
@@ -1972,6 +1983,7 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

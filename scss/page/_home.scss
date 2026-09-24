@@ -16,7 +16,6 @@
 
     &__cate {
         --grid-gutter-x: 51px;
-        margin-top: 20px;
 
 
         @include abstracts.screen(xl) {
@@ -32,5 +31,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
     }
 }
