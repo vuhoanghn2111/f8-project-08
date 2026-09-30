@@ -1255,6 +1255,9 @@ html.dark {
   --product-card-shadow: rgba(0, 0, 0, 0.2);
   --like-btn-bg: #292e39;
   --like-btn-shadow: rgba(124, 124, 124, 0.2);
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-form-tag-bg: #171c28;
 }
 
 :root {
@@ -1294,9 +1297,10 @@ html.dark {
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --like-btn-bg: #fff;
-  --like-btn-shadow:rgba(124, 124, 124, 0.20);
+  --like-btn-shadow: rgba(124, 124, 124, 0.2);
   --filter-form-bg: #fff;
-  --filter-form-shadow: rgba(200, 200, 200, 0.40);
+  --filter-form-shadow: rgba(200, 200, 200, 0.4);
+  --filter-form-tag-bg: #f8f8fb;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2023,6 +2027,10 @@ html.dark {
 .filter__form-slider::after {
   left: var(--max-value);
 }
+.filter__form-input, .filter__form-select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
 .filter__form-input {
   padding: 0 12px;
   width: 121px;
@@ -2030,12 +2038,52 @@ html.dark {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 142.857%;
+}
+.filter__form-select-wrap {
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+.filter__form-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  padding: 0 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  cursor: pointer;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.filter__form-tag {
+  padding: 6px 12px;
   border-radius: 6px;
-  border: 1px solid #d2d1d6;
+  color: #9e9da8;
+  background: var(--filter-form-tag-bg);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  transition: color 0.25s;
+}
+.filter__form-tag:hover {
+  color: var(--text-color);
 }
 .filter__row {
   display: flex;
-  flex: 1;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background: #eee;
 }
 
 .home__container {
