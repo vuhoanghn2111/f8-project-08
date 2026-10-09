@@ -26,11 +26,17 @@ button {
     padding: 0;
     cursor: pointer;
 }
-a,button, input, textarea, select {
+a,
+button,
+input,
+textarea,
+select {
     font-family: inherit;
     color: inherit;
-    -webkit-tap-highlight-color: transparent;  
+    -webkit-tap-highlight-color: transparent;
     outline: none;
+    border: none;
+    padding: 0;
 }
 .icon {
     filter: var(--icon-color);
