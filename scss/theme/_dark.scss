@@ -44,7 +44,8 @@ html.dark {
     --like-btn-shadow: rgba(124, 124, 124, 0.2);
 
     // Filter form
-    --filter-form-bg: #292e39;
+    --filter-form-bg: var(--drop-down-bg-color);
     --filter-form-shadow: rgba(0, 0, 0, 0.4);
     --filter-form-tag-bg: #171c28;
+    --filter-form-arrow-color: var(--drop-down-arrow-color);
 }
