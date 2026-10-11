@@ -10,18 +10,19 @@
     top: 55px;
 
     border-radius: 20px;
-    padding: 30px;
+    padding: 30px 0px;
 
     background: var(--filter-form-bg);
     filter: drop-shadow(0 40px 90px var(--filter-form-shadow));
     transition: opacity, visibility;
     transition-duration: 0.5s;
 
-    @include abstracts.screen(xl) {
-        height: calc(100vh - 80px);
-        overflow-y: auto;
-        overscroll-behavior: contain;
-        padding-bottom: 0;
+    @include abstracts.screen(sm) {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        border-radius: 0;
     }
 
     &.hide {
@@ -55,6 +56,10 @@
                 margin-bottom: 10px;
                 font-size: 1.4rem;
                 line-height: 142.857%;
+
+                @include abstracts.screen(xl) {
+                    width: 100%;
+                }
             }
         }
 
@@ -62,7 +67,8 @@
             margin-top: 20px;
 
             &--inline {
-                display: flex;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 gap: 30px;
             }
         }
@@ -136,6 +142,10 @@
                 font-weight: 400;
                 color: #9e9da8;
             }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+            }
         }
         &-input-icon {
             margin-left: 12px;
@@ -160,6 +170,10 @@
             line-height: 142.857%;
 
             cursor: pointer;
+
+            @include abstracts.screen(xl) {
+                flex: 1;
+            }
         }
 
         &-select + &-select {
@@ -170,6 +184,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px 20px;
+
+            @include abstracts.screen(sm) {
+                gap: 10px;
+            }
         }
 
         &-tag {
@@ -211,15 +229,10 @@
         justify-content: flex-end;
         margin-top: 32px;
 
-        @include abstracts.screen(xl) {
-            position: sticky;
-            bottom: 0;
-            background: var(--filter-form-bg);
-            padding-bottom: 16px;
-        }
-
         @include abstracts.screen(sm) {
-            width: 85vw;
+            position: sticky;
+            bottom: 30px;
+            background: var(--filter-form-bg);
         }
     }
 
@@ -230,6 +243,7 @@
 
         @include abstracts.screen(sm) {
             flex: 1;
+            height: 45px;
         }
     }
     &__cancel {
@@ -239,9 +253,23 @@
         font-size: 1.4rem;
     }
 
+    &__heading,
+    &__content,
+    &__footer {
+        padding: 0 30px;
+    }
+
     &__content {
+        max-height: calc(100vh - 350px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
         @include abstracts.screen(xl) {
             flex-direction: column;
+        }
+
+        @include abstracts.screen(sm) {
+            max-height: calc(100vh - 230px);
+            padding-bottom: 60px;
         }
     }
 }
