@@ -1924,7 +1924,8 @@ html.dark {
   display: none;
 }
 .like-btn__icon--like {
-  margin-top: 6px;
+  margin-top: 7px;
+  margin-left: 2px;
 }
 
 .btn {
@@ -1987,6 +1988,11 @@ html.dark {
 }
 .product-card__title {
   margin-top: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .product-card__title, .product-card__price, .product-card__score {
   font-size: 1.6rem;
