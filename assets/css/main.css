@@ -1277,6 +1277,7 @@ html.dark {
       contrast(98%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
+  --footer-bg-color: var(--header-bg-color);
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
@@ -1543,6 +1544,39 @@ html.dark {
 }
 .nav-btn__qnt {
   margin-left: auto;
+}
+
+.footer {
+  background: var(--footer-bg-color);
+  margin-top: 60px;
+  padding: 60px 0;
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+.footer__list {
+  margin-top: 18px;
+}
+.footer__link, .footer__text {
+  padding: 8px 0;
+}
+.footer__link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer__link:hover {
+  color: #0071dc;
+  text-decoration: underline;
+}
+.footer__label {
+  font-weight: 500;
 }
 
 .logo {

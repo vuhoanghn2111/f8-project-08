@@ -1,0 +1,43 @@
+.footer {
+    background: var(--footer-bg-color);
+    margin-top: 60px;
+    padding: 60px 0;
+
+    &__inner {
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 2.2rem;
+    }
+
+    &__list {
+        margin-top: 18px;
+    }
+
+    &__link,
+    &__text {
+        padding: 8px 0;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        
+        &:hover {
+            color: #0071dc;
+            text-decoration: underline;
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+}
